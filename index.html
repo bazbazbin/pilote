@@ -21,9 +21,37 @@
                 <li>Clôture de l'achat, échéance 15/12/2026, À faire</li>
             </ul>
         </section>
+        <section>
+            <h2>Nouvelle tâche</h2>
+            <form>
+                <div>
+                <label for="Titre">Titre</label>
+                <input type="text" name="Titre" id="Titre" required>
+                </div>
+                <div>
+                <label for="description">Description</label>
+                <textarea name="description" id="description">Description</textarea>
+                </div>
+                <div>
+                <label for="echeance">Echéance</label>
+                <input type="date" name="echeance" id="echeance">
+                </div>
+                <div>
+                <label for="priorite">Priorité</label>
+                <select name="priorite" id="priorite">
+                    <option value="basse">Basse</option>
+                    <option value="moyenne">Moyenne</option>
+                    <option value="haute">Haute</option>
+                </select>
+                </div>
+                <div>
+                <button type="submit">Ajouter la tâche</button>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
-        <p> Pilote, projet d'apprentissage</p>
+        <p><em>Pilote, projet d'apprentissage</em></p>
     </footer>
 </body>
 </html>
