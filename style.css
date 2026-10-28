@@ -1,0 +1,20 @@
+:root {
+  --couleur-fond: #f4f6f8;
+  --couleur-texte: #315982;
+  --couleur-accent: #e64413;
+}
+body {
+  background-color: var(--couleur-fond);
+  color: var(--couleur-texte);
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+header {
+  background-color: var(--couleur-accent);
+  color: var(--couleur-fond);
+  padding: 16px;
+}
+main {
+  max-width: 800px;
+  margin: 0 auto;
+}
