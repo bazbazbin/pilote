@@ -18,3 +18,17 @@ main {
   max-width: 800px;
   margin: 0 auto;
 }
+ul {
+  list-style: none;
+  padding: 0;
+}
+.tache {
+  background-color: beige;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
+}
+.tache:hover {
+  font-weight: bold;
+}
