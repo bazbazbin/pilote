@@ -2,6 +2,8 @@
   --couleur-fond: #f4f6f8;
   --couleur-texte: #315982;
   --couleur-accent: #e64413;
+  --couleur-neutre: #6c5b56;
+  --couleur-basse: #099602;
 }
 body {
   background-color: var(--couleur-fond);
@@ -31,4 +33,21 @@ ul {
 }
 .tache:hover {
   font-weight: bold;
+}
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: var(--couleur-fond);
+  margin-right: 8px;
+}
+.haute {
+  background-color: var(--couleur-accent);
+}
+.moyenne {
+  background-color: var(--couleur-neutre);
+}
+.basse {
+  background-color: var(--couleur-basse);
 }
