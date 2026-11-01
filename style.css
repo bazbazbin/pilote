@@ -64,12 +64,12 @@ ul {
 }
 
 .kanban {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 
 .colonne {
-  flex: 1;
   padding: 12px;
   border-radius: 8px;
   background-color: var(--couleur-colonne);
