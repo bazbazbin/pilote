@@ -1,29 +1,35 @@
 :root {
-  --couleur-fond: #f4f6f8;
-  --couleur-texte: #315982;
-  --couleur-accent: #e64413;
-  --couleur-neutre: #6c5b56;
-  --couleur-basse: #099602;
+  --couleur-fond: white;
+  --couleur-texte: blue;
+  --couleur-accent: red;
+  --couleur-neutre: brown;
+  --couleur-basse: green;
+  --couleur-colonne: purple;
 }
+
 body {
   background-color: var(--couleur-fond);
   color: var(--couleur-texte);
   font-family: Arial, sans-serif;
   margin: 0;
 }
+
 header {
   background-color: var(--couleur-accent);
   color: var(--couleur-fond);
   padding: 16px;
 }
+
 main {
   max-width: 800px;
   margin: 0 auto;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
+
 .tache {
   background-color: beige;
   padding: 12px;
@@ -31,9 +37,11 @@ ul {
   border-radius: 8px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
+
 .tache:hover {
   font-weight: bold;
 }
+
 .badge {
   display: inline-block;
   padding: 2px 8px;
@@ -42,12 +50,27 @@ ul {
   color: var(--couleur-fond);
   margin-right: 8px;
 }
+
 .haute {
   background-color: var(--couleur-accent);
 }
+
 .moyenne {
   background-color: var(--couleur-neutre);
 }
+
 .basse {
   background-color: var(--couleur-basse);
+}
+
+.kanban {
+  display: flex;
+  gap: 16px;
+}
+
+.colonne {
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--couleur-colonne);
 }

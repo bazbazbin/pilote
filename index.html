@@ -1,58 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Pilote</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
     <header>
-        <h1>Pilote</h1>
-        <p>Mon outil de gestion de projet.</p>
+      <h1>Pilote</h1>
+      <p>Mon outil de gestion de projet.</p>
     </header>
     <main>
-        <section>
-            <h2>Projet achat immobilier</h2>
-            <p>Pilotage du projet d'achat d'un bien immobilier.</p>
-            <h3>Tâches</h3>
+      <section>
+        <h2>Projet achat immobilier</h2>
+        <p>Pilotage du projet d'achat d'un bien immobilier.</p>
+        <div class="kanban">
+          <div class="colonne">
+            <h3>A faire</h3>
             <ul>
-                <li class="tache"><span class="badge haute">Haute</span> Recherche de biens, échéance 28/10/2026, Terminé</li>
-                <li class="tache"><span class="badge haute">Haute</span> Négociation du prix, échéance 15/11/2026, En cours</li>
-                <li class="tache"><span class="badge moyenne">Moyenne</span> Validation des documents, échéance 30/11/2026, À faire</li>
-                <li class="tache"><span class="badge basse">Basse</span> Clôture de l'achat, échéance 15/12/2026, À faire</li>
+              <li class="tache">
+                <span class="badge moyenne">Moyenne</span>Validation des
+                documents, échéance 30/11/2026
+              </li>
+              <li class="tache">
+                <span class="badge basse">Basse</span>Clôture de l'achat,
+                échéance 15/12/2026
+              </li>
             </ul>
-        </section>
-        <section>
-            <h2>Nouvelle tâche</h2>
-            <form>
-                <div>
-                <label for="titre">Titre</label>
-                <input type="text" name="titre" id="titre" required>
-                </div>
-                <div>
-                <label for="description">Description</label>
-                <textarea name="description" id="description" placeholder="Description"></textarea>
-                </div>
-                <div>
-                <label for="echeance">Echéance</label>
-                <input type="date" name="echeance" id="echeance">
-                </div>
-                <div>
-                <label for="priorite">Priorité</label>
-                <select name="priorite" id="priorite">
-                    <option value="basse">Basse</option>
-                    <option value="moyenne">Moyenne</option>
-                    <option value="haute">Haute</option>
-                </select>
-                </div>
-                <div>
-                <button type="submit">Ajouter la tâche</button>
-                </div>
-            </form>
-        </section>
+          </div>
+          <div class="colonne">
+            <h3>En cours</h3>
+            <ul>
+              <li class="tache">
+                <span class="badge haute">Haute</span>Négociation du prix,
+                échéance 15/11/2026
+              </li>
+            </ul>
+          </div>
+          <div class="colonne">
+            <h3>Terminé</h3>
+            <ul>
+              <li class="tache">
+                <span class="badge haute">Haute</span>Recherche de biens,
+                échéance 28/10/2026
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Nouvelle tâche</h2>
+        <form>
+          <div>
+            <label for="titre">Titre</label>
+            <input type="text" name="titre" id="titre" required />
+          </div>
+          <div>
+            <label for="description">Description</label>
+            <textarea
+              name="description"
+              id="description"
+              placeholder="Description"
+            ></textarea>
+          </div>
+          <div>
+            <label for="echeance">Echéance</label>
+            <input type="date" name="echeance" id="echeance" />
+          </div>
+          <div>
+            <label for="priorite">Priorité</label>
+            <select name="priorite" id="priorite">
+              <option value="basse">Basse</option>
+              <option value="moyenne">Moyenne</option>
+              <option value="haute">Haute</option>
+            </select>
+          </div>
+          <div>
+            <button type="submit">Ajouter la tâche</button>
+          </div>
+        </form>
+      </section>
     </main>
     <footer>
-        <p><em>Pilote, projet d'apprentissage</em></p>
+      <p><em>Pilote, projet d'apprentissage</em></p>
     </footer>
-</body>
+  </body>
 </html>
