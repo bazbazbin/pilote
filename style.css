@@ -4,7 +4,7 @@
   --couleur-accent: red;
   --couleur-neutre: brown;
   --couleur-basse: green;
-  --couleur-colonne: purple;
+  --couleur-colonne: lightgrey;
 }
 
 body {
@@ -80,7 +80,6 @@ ul {
 }
 
 .colonne {
-  flex: 1;
   padding: 12px;
   border-radius: 8px;
   background-color: var(--couleur-colonne);
