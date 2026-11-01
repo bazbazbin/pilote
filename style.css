@@ -41,6 +41,16 @@ ul {
 .tache:hover {
   font-weight: bold;
 }
+.tache-entete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.echeance {
+  font-size: 0.85em;
+}
 
 .badge {
   display: inline-block;
@@ -70,6 +80,7 @@ ul {
 }
 
 .colonne {
+  flex: 1;
   padding: 12px;
   border-radius: 8px;
   background-color: var(--couleur-colonne);
