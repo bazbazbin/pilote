@@ -49,3 +49,21 @@
 
 - La structure d'écriture css en cascade
 - Le lien entre html et css
+
+## 01/11/2026
+
+**Fait**
+
+- Rajouté un affichage en mode colonne sur le Kanban
+- Rajouté un affichage structuré aussi en mode colonne sur les en-têtes de mes tâches Kanban
+
+**Coincé**
+
+- J'ai mal écrit la commande git pour delete ma branche (j'ai utilisé git switch au lieu de branch)
+
+**A retenir**
+
+- La propriété display est utilisée pour l'affichage lignes / colonnes
+- la valeur Flex permet à la structure de s'ajuster au contenu, selon différentes règles permettant aux éléments de s'organiser automatiquement selon l'alignement et la répartition désirés
+- la valeur grid fixe la structure et le contenu s'adapte
+- il est nécessaire sur le html d'inclure les div / span permettant de structurer le contenu et de faire appel aux classes indiquées dans le .css
