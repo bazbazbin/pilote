@@ -67,7 +67,3 @@
 - la valeur Flex permet à la structure de s'ajuster au contenu, selon différentes règles permettant aux éléments de s'organiser automatiquement selon l'alignement et la répartition désirés
 - la valeur grid fixe la structure et le contenu s'adapte
 - il est nécessaire sur le html d'inclure les div / span permettant de structurer le contenu et de faire appel aux classes indiquées dans le .css
-
-## Voir le site
-
-[Ouvrir Pilote en ligne](https://bazbazbin.github.io/pilote/)
