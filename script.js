@@ -7,4 +7,3 @@ console.log(nomProjet, nbTaches, projetTermine);
 nbTaches = nbTaches + 1;
 console.log("Après ajout :", nbTaches);
 console.log(typeof projetTermine);
-nomProjet = "Autre projet"
