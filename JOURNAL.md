@@ -67,3 +67,19 @@
 - la valeur Flex permet à la structure de s'ajuster au contenu, selon différentes règles permettant aux éléments de s'organiser automatiquement selon l'alignement et la répartition désirés
 - la valeur grid fixe la structure et le contenu s'adapte
 - il est nécessaire sur le html d'inclure les div / span permettant de structurer le contenu et de faire appel aux classes indiquées dans le .css
+
+## 02/11/2026
+
+**Fait**
+
+- Kanban responsive (colonnes empilées sur mobile)
+- Pilote en ligne sur GitHub Pages, lien dans le README
+
+**Coincé**
+
+- repeat(1fr) invalide, donc ignoré : il fallait 1fr
+
+**A retenir**
+
+- @media : règles sous condition, à placer après la règle modifiée
+- Chaque push sur main republie le site
