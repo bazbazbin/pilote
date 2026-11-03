@@ -79,14 +79,14 @@ ul {
   gap: 16px;
 }
 
-.colonne {
-  padding: 12px;
-  border-radius: 8px;
-  background-color: var(--couleur-colonne);
-}
-
 @media (max-width: 600px) {
   .kanban {
     grid-template-columns: 1fr;
   }
+}
+
+.colonne {
+  padding: 12px;
+  border-radius: 8px;
+  background-color: var(--couleur-colonne);
 }
