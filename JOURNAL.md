@@ -83,3 +83,20 @@
 
 - @media : règles sous condition, à placer après la règle modifiée
 - Chaque push sur main republie le site
+
+## 05/11/2026
+
+**Fait**
+
+- script.js branché sur Pilote, tests dans la console
+- Fonctions joursRestants(echeance) et estEnRetard(tache)
+
+**Coincé**
+
+- joursRestants ignorait son paramètre : « echeance is not defined »
+
+**A retenir**
+
+- const ne change pas, let peut changer ; toujours ===
+- Paramètre = la boîte, argument = la valeur donnée à l'appel
+- new Date(...) fabrique une date ; Date() sans new = du texte
