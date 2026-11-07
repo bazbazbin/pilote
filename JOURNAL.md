@@ -100,3 +100,16 @@
 - const ne change pas, let peut changer ; toujours ===
 - Paramètre = la boîte, argument = la valeur donnée à l'appel
 - new Date(...) fabrique une date ; Date() sans new = du texte
+
+## 07/11/2026
+
+**Fait**
+
+- Tâches rangées dans un tableau d'objets
+- Boucle for...of, filter, find, map, compterParStatut
+
+**A retenir**
+
+- Un tableau commence à 0 ; case vide = undefined
+- filter → tableau, find → un objet (ou undefined)
+- Sans return, une fonction renvoie undefined
