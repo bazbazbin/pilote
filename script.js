@@ -9,18 +9,6 @@ nbTaches = nbTaches + 1;
 console.log("Après ajout :", nbTaches);
 console.log(typeof projetTermine);
 
-function libellePriorite(priorite) {
-  if (priorite === "haute") {
-    return "Urgent";
-  } else if (priorite === "moyenne") {
-    return "Normal";
-  } else {
-    return "Plus tard";
-  }
-}
-console.log(libellePriorite("haute"));
-console.log(libellePriorite("basse"));
-
 function estTerminee(statut) {
   return statut === "termine";
 }
@@ -38,37 +26,63 @@ console.log(joursRestants("2026-11-30"));
 console.log(joursRestants("2026-11-04"));
 console.log(joursRestants("2026-10-28"));
 
-const tache1 = {
-  titre: "Négociation du prix",
-  statut: "en-cours",
-  echeance: "2026-11-15",
-};
+const taches = [
+  {
+    id: 1,
+    titre: "Négociation du prix",
+    priorite: "haute",
+    statut: "en-cours",
+    echeance: "2026-11-15",
+  },
+  {
+    id: 2,
+    titre: "analyse du bien",
+    priorite: "moyenne",
+    statut: "termine",
+    echeance: "2026-10-15",
+  },
+  {
+    id: 3,
+    titre: "Revue des conseils",
+    priorite: "basse",
+    statut: "a-faire",
+    echeance: "2026-11-01",
+  },
+];
 
-const tache2 = {
-  titre: "analyse du bien",
-  statut: "termine",
-  echeance: "2026-10-15",
-};
-
-const tache3 = {
-  titre: "Revue des conseils",
-  statut: "a-faire",
-  echeance: "2026-11-01",
-};
-
-console.log(tache1.titre);
-console.log(tache1.echeance);
-
-console.log(tache2.titre);
-console.log(tache2.echeance);
-
-console.log(tache3.titre);
-console.log(tache3.echeance);
+function libellePriorite(tache) {
+  if (tache.priorite === "haute") {
+    return "Urgent";
+  } else if (tache.priorite === "moyenne") {
+    return "Normal";
+  } else {
+    return "Plus tard";
+  }
+}
+console.log(libellePriorite(taches[0]));
+console.log(libellePriorite(taches[1]));
 
 function estEnRetard(tache) {
   return joursRestants(tache.echeance) < 0 && tache.statut !== "termine";
 }
 
-console.log(estEnRetard(tache1));
-console.log(estEnRetard(tache2));
-console.log(estEnRetard(tache3));
+for (const tache of taches) {
+  console.log("Tâche :", tache.titre, "| En retard ? :", estEnRetard(tache));
+}
+console.log(taches.length);
+
+console.log(taches.filter((tache) => tache.priorite === "haute"));
+console.log(taches.find((tache) => tache.id === 3));
+console.log(taches.map((tache) => tache.titre));
+
+function compterParStatut(statut) {
+  return taches.filter((tache) => tache.statut === statut).length;
+}
+console.log(
+  "A faire :",
+  compterParStatut("a-faire"),
+  "| En cours:",
+  compterParStatut("en-cours"),
+  "| Terminé :",
+  compterParStatut("termine"),
+);
