@@ -48,6 +48,13 @@ const taches = [
     statut: "a-faire",
     echeance: "2026-11-01",
   },
+  {
+    id: 4,
+    titre: "Initialisation",
+    priorite: "basse",
+    statut: "archive",
+    echeance: "2026-09-01",
+  },
 ];
 
 function libellePriorite(tache) {
@@ -86,3 +93,52 @@ console.log(
   "| Terminé :",
   compterParStatut("termine"),
 );
+function double(n) {
+  console.log(n * 2);
+}
+const r = double(5);
+console.log(r);
+
+const li = document.createElement("li");
+li.classList.add("tache");
+li.textContent = "Test DOM";
+document.querySelector(".colonne ul").appendChild(li);
+
+function creerCarte(tache) {
+  // 1. Fabriquer les 4 éléments
+  const carte = document.createElement("li");
+  const entete = document.createElement("div");
+  const badge = document.createElement("span");
+  const echeance = document.createElement("span");
+
+  // 2. Leur donner classes et textes
+  carte.classList.add("tache");
+  entete.classList.add("tache-entete");
+  badge.classList.add("badge", tache.priorite); // "badge haute"
+  badge.textContent = libellePriorite(tache); // "Urgent"
+  echeance.classList.add("echeance");
+  echeance.textContent = tache.echeance; // "2026-11-15"
+
+  // 3. Emboîter, du plus petit au plus grand
+  entete.appendChild(badge);
+  entete.appendChild(echeance);
+  carte.appendChild(entete);
+  carte.append(tache.titre); // le titre, après l'en-tête
+
+  return carte;
+}
+
+function afficherTableau() {
+  // 1. Vider les 3 colonnes
+  document.getElementById("a-faire").textContent = "";
+  document.getElementById("en-cours").textContent = "";
+  document.getElementById("termine").textContent = "";
+
+  // 2. Poser chaque tâche dans la colonne qui porte son statut
+  for (const tache of taches) {
+    const colonne = document.getElementById(tache.statut);
+    colonne.appendChild(creerCarte(tache));
+  }
+}
+
+afficherTableau();
