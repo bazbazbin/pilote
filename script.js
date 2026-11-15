@@ -48,13 +48,6 @@ const taches = [
     statut: "a-faire",
     echeance: "2026-11-01",
   },
-  {
-    id: 4,
-    titre: "Initialisation",
-    priorite: "basse",
-    statut: "archive",
-    echeance: "2026-09-01",
-  },
 ];
 
 function libellePriorite(tache) {
