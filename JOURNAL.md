@@ -113,3 +113,16 @@
 - Un tableau commence à 0 ; case vide = undefined
 - filter → tableau, find → un objet (ou undefined)
 - Sans return, une fonction renvoie undefined
+
+## 15/11/2026
+
+**Fait**
+
+- Kanban généré en JS : creerCarte(tache), afficherTableau()
+- Tâches en dur supprimées de index.html
+
+**A retenir**
+
+- createElement fabrique, append/appendChild pose dans la page
+- textContent remplace, append ajoute
+- querySelector/getElementById renvoient null si rien trouvé
