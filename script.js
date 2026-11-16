@@ -92,11 +92,6 @@ function double(n) {
 const r = double(5);
 console.log(r);
 
-const li = document.createElement("li");
-li.classList.add("tache");
-li.textContent = "Test DOM";
-document.querySelector(".colonne ul").appendChild(li);
-
 function creerCarte(tache) {
   // 1. Fabriquer les 4 éléments
   const carte = document.createElement("li");
