@@ -26,7 +26,7 @@ console.log(joursRestants("2026-11-30"));
 console.log(joursRestants("2026-11-04"));
 console.log(joursRestants("2026-10-28"));
 
-const taches = [
+let taches = [
   {
     id: 1,
     titre: "Négociation du prix",
@@ -112,6 +112,23 @@ function creerCarte(tache) {
   carte.appendChild(entete);
   carte.append(tache.titre); // le titre, après l'en-tête
 
+  // 4. Les boutons d'action
+  const actions = document.createElement("div");
+  actions.classList.add("tache-actions");
+
+  const boutonAvancer = document.createElement("button");
+  boutonAvancer.textContent = "→";
+  boutonAvancer.classList.add("avancer");
+  boutonAvancer.dataset.id = tache.id;
+
+  const boutonSupprimer = document.createElement("button");
+  boutonSupprimer.textContent = "✕";
+  boutonSupprimer.classList.add("supprimer");
+  boutonSupprimer.dataset.id = tache.id;
+
+  actions.append(boutonAvancer, boutonSupprimer);
+  carte.appendChild(actions);
+
   return carte;
 }
 
@@ -149,5 +166,37 @@ formulaire.addEventListener("submit", function (event) {
 
   // 4. Vider le formulaire
   formulaire.reset();
+});
+
+const kanban = document.querySelector(".kanban");
+
+function supprimerTache(id) {
+  taches = taches.filter((tache) => tache.id !== id);
+  afficherTableau();
+}
+
+function avancerTache(id) {
+  // 1. Trouver la tâche qui a cet id
+  const tache = taches.find((tache) => tache.id === id);
+
+  // 2. Changer son statut
+  if (tache.statut === "a-faire") {
+    tache.statut = "en-cours";
+  } else if (tache.statut === "en-cours") {
+    tache.statut = "termine";
+  }
+
+  // 3. Réafficher le tableau
+  afficherTableau();
+}
+
+kanban.addEventListener("click", function (event) {
+  const bouton = event.target; // l'élément exact qui a été cliqué
+  const id = Number(bouton.dataset.id);
+  if (bouton.classList.contains("supprimer")) {
+    supprimerTache(id);
+  } else if (bouton.classList.contains("avancer")) {
+    avancerTache(id);
+  }
 });
 afficherTableau();
