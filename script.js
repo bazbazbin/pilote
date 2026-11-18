@@ -70,7 +70,6 @@ for (const tache of taches) {
   console.log("Tâche :", tache.titre, "| En retard ? :", estEnRetard(tache));
 }
 console.log(taches.length);
-
 console.log(taches.filter((tache) => tache.priorite === "haute"));
 console.log(taches.find((tache) => tache.id === 3));
 console.log(taches.map((tache) => tache.titre));
@@ -129,4 +128,26 @@ function afficherTableau() {
   }
 }
 
+const formulaire = document.querySelector("form");
+
+formulaire.addEventListener("submit", function (event) {
+  event.preventDefault();
+  // 1. Fabriquer un objet tâche
+  const nouvelleTache = {
+    id: taches.length + 1,
+    titre: document.getElementById("titre").value,
+    priorite: document.getElementById("priorite").value,
+    echeance: document.getElementById("echeance").value,
+    statut: "a-faire",
+  };
+
+  // 2. Ajouter la tâche au tableau taches
+  taches.push(nouvelleTache);
+
+  // 3. Réafficher le tableau
+  afficherTableau();
+
+  // 4. Vider le formulaire
+  formulaire.reset();
+});
 afficherTableau();
